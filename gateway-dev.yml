@@ -9,12 +9,18 @@ spring:
          ribbon:
             enabled: false
       gateway:
-         routes:
-            filters:
-               - name: AddRequestHeader
-                 args:
-                    name: X-Simple-Header
-                    value: simple
+         default-filters:
+            - name: Retry
+              args:
+                 retries: 3
+                 methods: GET
+                 series: SERVER_ERROR
+                 exceptions: java.io.IOException
+                 backoff:
+                    firstBackoff: 50ms
+                    maxBackoff: 500ms
+                    factor: 2
+                    basedOnPreviousValue: false
          discovery:
             locator:
                enabled: true
