@@ -3,6 +3,17 @@ spring:
       loadbalancer:
          ribbon:
             enabled: false
+      gateway:
+         routes:
+            - id: event-route
+              uri: http://localhost:8084
+              predicates:
+                 - Path=/events/**
+            -  id: registration-route
+               uri: http://localhost:8081
+               predicates:
+                  - Path=/registration/**
+
 server:
    port: 8080
 
