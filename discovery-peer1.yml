@@ -3,10 +3,6 @@ eureka:
       hostname: peer1
    client:
       serviceUrl:
-         defaultZone: http://peer2:8762/eureka,http://peer3:8763/eureka
-#   cloud:
-#      loadbalancer:
-#         ribbon:
-#            enabled: false
+         defaultZone: http://localhost:8762/eureka,http://localhost:8763/eureka
 server:
    port: 8761

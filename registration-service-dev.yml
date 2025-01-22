@@ -22,7 +22,7 @@ eureka:
 #      ip-address: 192.168.2.16:${server.port}
    client:
       serviceUrl:
-         defaultZone: http://peer1:8761/eureka,http://peer2:8762/eureka,http://peer3:8763/eureka
+         defaultZone: http://localhost:8761/eureka,http://localhost:8762/eureka,http://localhost:8763/eureka
 #         defaultZone: http://localhost:8761/eureka
 
 server:
