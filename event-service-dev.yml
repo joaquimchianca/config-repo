@@ -17,6 +17,9 @@ spring:
 #         ribbon:
 #            enabled: false
 eureka:
+   instance:
+      prefer-ip-address: true
+      ip-address: 192.168.2.16${server.port}
    client:
       serviceUrl:
          defaultZone: http://localhost:8761/eureka
