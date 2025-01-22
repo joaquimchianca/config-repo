@@ -12,9 +12,9 @@ spring:
       properties:
          hibernate:
             format_sql: true
-   cloud:
-      loadbalancer:
-         ribbon:
-            enabled: false
+#   cloud:
+#      loadbalancer:
+#         ribbon:
+#            enabled: false
 server:
    port: 8084
