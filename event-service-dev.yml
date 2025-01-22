@@ -18,7 +18,7 @@ spring:
             enabled: false
 eureka:
    instance:
-      prefer-ip-address: true
+#      prefer-ip-address: true
 #      ip-address: 192.168.2.16${server.port}
    client:
       registerWithEureka: true
