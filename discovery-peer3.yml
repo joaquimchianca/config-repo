@@ -1,0 +1,12 @@
+eureka:
+   instance:
+      hostname: peer3
+   client:
+      serviceUrl:
+         defaultZone: http://peer1:8761/eureka,http://peer2:8762/eureka
+#   cloud:
+#      loadbalancer:
+#         ribbon:
+#            enabled: false
+server:
+   port: 8763
